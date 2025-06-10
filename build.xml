@@ -9,6 +9,7 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="MP4" default="default" basedir=".">
     <description>Builds, tests, and runs the project MP4.</description>
+    <property name="libs.CopyLibs.classpath" location="lib/org-netbeans-modules-java-j2seproject-copylibstask.jar"/>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
