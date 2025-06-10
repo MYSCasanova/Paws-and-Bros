@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf8e4;
+    color: #1d2b3b;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fdf8e4;
+    font-size: 18px;
+    border-bottom: 2px solid #f1e4c0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #f58300;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1d2b3b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f58300;
+}
+
+.active {
+    color: #f58300;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 40px;
+    gap: 30px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.intro {
+    max-width: 500px;
+    flex: 1;
+    text-align: justify;
+}
+
+.intro h1 {
+    font-size: 48px;
+    color: #1d2b3b;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.intro p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+    text-align: justify;
+}
+
+.dog-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -10px;
+}
+
+.dog-image img {
+    max-width: 50%;
+    height: 20%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 350px;
+    flex-shrink: 0;
+    margin-right: 40px;
+}
+
+.login-box p {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #1d2b3b;
+}
+
+.login-btn {
+    background-color: #f58300;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.guest-btn {
+    background-color: #fbc834;
+    color: #1d2b3b;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #d96b00;
+    transform: translateY(-2px);
+}
+
+.guest-btn:hover {
+    background-color: #e8b12c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1743px) {
+    .dog-image img {
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 1369px) {
+    .dog-image img {
+        margin-top: 8%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 20px;
+    }
+    .intro h1 {
+        font-size: 40px;
+    }
+    .intro p {
+        font-size: 17px;
+    }
+
+    .dog-image img {
+        margin-top: 30%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 1008px) {
+    .dog-image img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 850px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .login-box {
+        margin-left: 10%;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dog-image img {
+        margin-top: 70%;
+        max-width: 220px;
+    }
+
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .intro p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dog-image {
+        margin-top: 20%;
+    }
+    .dog-image img {
+        max-width: 200px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 592px) {
+    .dog-image {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 16px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    .login-box {
+        margin-left: 10%;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .dog-image {
+        margin-top: 30%;
+    }
+
+    .dog-image img {
+        margin-top: 80%;
+        max-width: 150px;
+    }
+}

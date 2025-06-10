@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf8e4;
+    color: #07343b;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fdf8e4;
+    font-size: 18px;
+    border-bottom: 2px solid #f1e4c0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #f58300;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1d2b3b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f58300;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+    align-items: center;
+    padding: 40px; 
+    background-color: #fdf8e4;
+    font-size: 18px;
+    height: auto;
+    flex-grow: 1; 
+    overflow-y: auto;
+    place-items: center; 
+}
+
+.welcome-card {
+    background-color: #fff8d5;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%; 
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    flex-direction: row; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-card img {
+    max-width: 120px;
+    height: auto;
+}
+
+.welcome-card-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.welcome-card h2 {
+    margin: 0 0 10px; 
+    font-size: 30px;
+    color: #07343b;
+}
+
+.welcome-card p {
+    margin: 0; 
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #f1e4c0;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; 
+    min-width: 280px;
+    flex-grow: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #f1e4c0;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+}
+
+.grid a:nth-child(3) {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 5% 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 250px; 
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .welcome-card {
+        width: 100%; 
+        padding: 20px;
+    }
+
+    .welcome-card img {
+        max-width: 100px; 
+    }
+
+    .welcome-card-text {
+        text-align: justify;
+    }
+    
+    .grid a:nth-child(3) {
+        grid-column: span 1; /* Prevents spanning 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 5% 10px; /* Further reduce padding on small screens */
+    }
+
+    .card {
+        width: 100%; /* Make cards full-width */
+    }
+
+    .welcome-card {
+        width: 100%; /* Ensure welcome card is full-width */
+        padding: 20px;
+    }
+
+    .welcome-card img {
+        max-width: 80px; /* Make the image even smaller */
+    }
+
+    .welcome-card-text {
+        text-align: justify;
+    }
+    
+    .grid a:nth-child(3) {
+        grid-column: span 1; /* Prevents spanning 2 columns on smaller screens */
+    }
+}

@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf8e4;
+    color: #07343b;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fdf8e4;
+    font-size: 18px;
+    border-bottom: 2px solid #f1e4c0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #f58300;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1d2b3b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f58300;
+}
+
+main {
+    height: auto;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    margin-top: 30px;
+    padding: 20px 40px;
+    background-color: #fdf8e4;
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+.welcome-card {
+    background-color: #fff8d5;
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    order: 1;
+}
+
+.welcome-card img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.welcome-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.welcome-card h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    color: #07343b;
+}
+
+.welcome-card p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+}
+
+.appointment {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    order: 2
+}
+
+.appointment h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f58300;
+}
+
+.appointment p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.appointment button {
+    display: block;
+    width: 100%;
+    background-color: #07343b;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.appointment button:hover {
+    background-color: #005760;
+    transform: translateY(-2px);
+}
+
+.pet-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    order: 3;
+}
+
+.pet-card img {
+    max-width: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #07343b;
+}
+
+.pet-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.pet-card table {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed; 
+    word-wrap: break-word;
+}
+
+.pet-card table th,
+.pet-card table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+.pet-card .add-row {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #f58300;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pet-card table input {
+    width: 100%; 
+    padding: 8px; 
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 12px; 
+}
+
+.pet-card .add-row:hover {
+    background-color: #d96c00;
+}
+@media (max-width: 1249px) {
+    main {
+        grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+        padding: 20px;
+    }
+}
